@@ -1,10 +1,14 @@
 import React from 'react';
+import { TodoList } from './TodoList/TodoList';
 
-function App() {
+function App(props) {
     return (
-        <div>
-
-        </div>
+        <React.Fragment>
+            <TodoList
+                todoReducer={props.state.todoReducer}
+                store={props.store}
+            />
+        </React.Fragment>
     );
 }
 
