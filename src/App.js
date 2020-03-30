@@ -1,13 +1,10 @@
 import React from 'react';
-import { TodoList } from './TodoList/TodoList';
+import { TodoListCont } from './TodoList/TodoListCont';
 
-function App(props) {
+function App() {
     return (
         <React.Fragment>
-            <TodoList
-                todoReducer={props.state.todoReducer}
-                store={props.store}
-            />
+            <TodoListCont/>
         </React.Fragment>
     );
 }

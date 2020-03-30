@@ -18,16 +18,25 @@ const initialState = {//начальный стейт
 export function todoReducer(state = initialState, action) {
     switch (action.type) {
         case ADD_TODO:
-            const newTodo = { //создание нового элемента
+            //создание нового элемента
+            const newTodo = {
                 id: Date.now(),
                 todo: state.addTodo
             }
-            state.todoItems.push(newTodo) //создание последнего элемента массива
-            state.addTodo = ''//обнуление написанного в инпуте
-            return state
+            //заебатое оформление return
+            return {
+                ...state,
+                //создание последнего элемента массива, можно еще в начало
+                todoItems: [...state.todoItems, newTodo],
+                //обнуление написанного в инпуте
+                addTodo: ''
+            }
         case UPDATE_TODO:
-            state.addTodo = action.newText//изменине на каждую букву
-            return state
+            //изменение на каждую букву
+            return {
+                ...state,
+                addTodo: action.newText
+            }
         default:
             return state
     }
