@@ -5,7 +5,7 @@ import { NewTodoCont } from './NewTodo/NewTodoCont'
 
 export function TodoList(props) {
     return (
-        <div>
+        <div className="container">
             {
                 props.todoItems.map((data, id) => <TodoItem key={id} {...data} />)
             }

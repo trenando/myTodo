@@ -13,13 +13,14 @@ export function NewTodo(props) {
     }
 
     return (
-        <div>
-            <input type='text'
+        <div className="newtodo__container">
+            <input className="newtodo__input"
+                type='text'
                 placeholder="addtodo"
                 value={props.value}
                 onChange={onNewTodoTextChange}
             />
-            <button onClick={onSendTodoClick}>addtodo</button>
+            <button className="newtodo__btn" onClick={onSendTodoClick}>addtodo</button>
         </div>
     )
 }

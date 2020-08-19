@@ -1,1 +1,24 @@
-@import '../../index.scss';
+@import "../../index.scss";
+
+.newtodo__container {
+    width: 250px;
+    height: 25px;
+}
+
+.newtodo__input {
+    border: 1px solid #11f13a;
+    width: 175px;
+    height: inherit;
+    box-sizing: border-box;
+    &::placeholder{
+        padding-left: 5px;
+    }
+}
+
+.newtodo__btn {
+    width: 75px;
+    height: inherit;
+    box-sizing: border-box;
+    border: 1px solid #1144dd;
+    background-color: green;
+}

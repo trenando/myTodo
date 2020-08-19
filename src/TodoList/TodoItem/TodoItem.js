@@ -3,7 +3,7 @@ import './TodoItem.scss';
 
 export function TodoItem(props){
     return(
-        <div>
+        <div className="todo__item">
             {props.todo}
         </div>
     )
